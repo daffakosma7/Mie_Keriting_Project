@@ -1,0 +1,603 @@
+/* Main CSS Here */
+
+@import url(
+  "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+#admin {
+  /* Light Mode */
+  --background-color1: #fafaff;
+  --background-color2: #ffffff;
+  --background-color3: #ededed;
+  --background-color4: #cad7fda4;
+  --primary-color: #4b49ac;
+  --secondary-color: #0c007d;
+  --border-color: #3f0097;
+  --one-use-color: #3f0097;
+  --two-use-color: #5500cb;
+  --text-color-light: #000000;
+  --text-color-dark: #ffffff;
+  --header-text-light: #333;
+  --header-text-dark: #fff;
+  --link-text-light: #4b49ac;
+  --link-text-dark: #8c8c8c;
+}
+
+#admin {
+  background-color: var(--background-color4);
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Dark Mode */
+#admin.dark-mode {
+  background-color: #121212;
+}
+
+#admin.dark-mode header {
+  background-color: #333;
+  color: var(--header-text-dark);
+}
+
+#admin.dark-mode .logo {
+  color: var(--primary-color);
+}
+
+#admin.dark-mode .nav-option,
+#admin.dark-mode .nav-option.active {
+  background-color: #1f1f1f;
+}
+
+#admin.dark-mode .nav-option:hover {
+  background-color: #2a2a2a;
+  cursor: pointer;
+}
+
+#admin.dark-mode .nav-upper-options h3,
+#admin.dark-mode .main,
+#admin.dark-mode .report-header,
+#admin.dark-mode .recent-Articles,
+#admin.dark-mode .view {
+  color: var(--text-color-dark);
+}
+
+#admin.dark-mode .view {
+  background-color: var(--secondary-color);
+}
+
+/* Default Light Mode Styles */
+#admin header {
+  height: 70px;
+  width: 100vw;
+  padding: 0 30px;
+  background-color: var(--background-color1);
+  position: fixed;
+  z-index: 100;
+  box-shadow: 1px 1px 15px rgba(161, 182, 253, 0.825);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#admin .logo {
+  font-size: 27px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+#admin .icn {
+  height: 30px;
+}
+
+#admin .menuicn {
+  cursor: pointer;
+}
+
+#admin .searchbar,
+#admin .message,
+#admin .logosec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#admin .searchbar input {
+  width: 250px;
+  height: 42px;
+  border-radius: 50px 0 0 50px;
+  background-color: var(--background-color3);
+  padding: 0 20px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  color: var(--text-color-light);
+}
+
+#admin .searchbtn {
+  width: 50px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 50px 50px 0px;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+#admin .message {
+  gap: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+#admin .circle {
+  height: 7px;
+  width: 7px;
+  position: absolute;
+  background-color: #fa7bb4;
+  border-radius: 50%;
+  left: 19px;
+  top: 8px;
+}
+
+#admin .dp {
+  height: 40px;
+  width: 40px;
+  background-color: #626262;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#admin .main-container {
+  display: flex;
+  width: 100vw;
+  position: relative;
+  top: 70px;
+  z-index: 1;
+}
+
+#admin .dpicn {
+  height: 42px;
+}
+
+#admin .main {
+  height: calc(100vh - 70px);
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 40px 30px 30px 30px;
+}
+
+#admin .main::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, rgb(0, 0, 85), rgb(0, 0, 50));
+}
+
+#admin .main::-webkit-scrollbar {
+  width: 5px;
+}
+
+#admin .main::-webkit-scrollbar-track {
+  background-color: #9e9e9eb2;
+}
+
+#admin .nav {
+  min-height: 91vh;
+  width: 250px;
+  background-color: var(--background-color2);
+  position: absolute;
+  top: 0px;
+  left: 00;
+  box-shadow: 1px 1px 10px rgba(198, 189, 248, 0.825);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 0 20px 10px;
+}
+
+#admin .navcontainer {
+  height: calc(100vh - 70px);
+  width: 250px;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+#admin .navcontainer::-webkit-scrollbar {
+  display: none;
+}
+
+#admin .nav-option {
+  width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px 0 20px;
+  gap: 20px;
+  transition: all 0.1s ease-in-out;
+}
+
+#admin .nav-option:hover {
+  border-left: 5px solid #a2a2a2;
+  background-color: #dadada;
+  cursor: pointer;
+}
+
+#admin .nav-img {
+  height: 30px;
+}
+
+#admin .nav-upper-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+#admin .option1 {
+  border-left: 5px solid #010058af;
+  background-color: var(--border-color);
+  color: white;
+  cursor: pointer;
+}
+
+#admin .option1:hover {
+  border-left: 5px solid #010058af;
+  background-color: var(--border-color);
+}
+
+#admin .box-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+#admin .box {
+  height: 130px;
+  width: 230px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+#admin .box:hover {
+  transform: scale(1.08);
+}
+
+#admin .box:nth-child(1) {
+  background-color: var(--one-use-color);
+}
+
+#admin .box:nth-child(2) {
+  background-color: var(--two-use-color);
+}
+
+#admin .box:nth-child(3) {
+  background-color: var(--one-use-color);
+}
+
+#admin .box:nth-child(4) {
+  background-color: var(--two-use-color);
+}
+
+#admin .box img {
+  height: 50px;
+}
+
+#admin .box .text {
+  color: white;
+}
+
+#admin .topic {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+#admin .topic-heading {
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+#admin .report-container {
+  min-height: 300px;
+  max-width: 1200px;
+  margin: 70px auto 0px auto;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 3px 3px 10px rgb(188, 188, 188);
+  padding: 0px 20px 20px 20px;
+}
+
+#admin .report-header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 10px 20px;
+  border-bottom: 2px solid rgba(0, 20, 151, 0.59);
+}
+
+#admin .recent-Articles {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--link-text-light);
+}
+
+#admin .view {
+  height: 35px;
+  width: 90px;
+  border-radius: 8px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+#admin .report-body {
+  max-width: 1160px;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+#admin .report-topic-heading,
+#admin .item1 {
+  width: 1120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#admin .t-op {
+  font-size: 18px;
+  letter-spacing: 0px;
+}
+
+#admin .items {
+  width: 1120px;
+  margin-top: 15px;
+}
+
+#admin .item1 {
+  margin-top: 20px;
+}
+
+#admin .t-op-nextlvl {
+  font-size: 14px;
+  letter-spacing: 0px;
+  font-weight: 600;
+}
+
+#admin .t-op-nextlvl img {
+  width:100px;
+  height:100px;
+}
+
+#admin .label-tag {
+  width: 100px;
+  text-align: center;
+  background-color: rgb(0, 177, 0);
+  color: white;
+  border-radius: 4px;
+}
+
+#admin .nav-option.active {
+  background-color: #5500cb; /* Purple background */
+  border-left: 5px solid #5500cb; /* Optional border-left to highlight */
+}
+
+/* Edit and Remove Button Styles */
+
+/* Edit Button */
+.button-edit {
+  cursor: pointer;
+  padding: 6px 12px;
+  background-color: #4CAF50; /* Green for Edit */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-edit:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+.button-edit:focus {
+  outline: none; /* Remove the focus outline */
+}
+
+/* Remove Button */
+.button-remove {
+  cursor: pointer;
+  padding: 6px 12px;
+  background-color: #f44336; /* Red for Remove */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-remove:hover {
+  background-color: #e53935; /* Slightly darker red on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+.button-remove:focus {
+  outline: none; /* Remove the focus outline */
+}
+
+/* Dark Mode Button Overrides */
+#admin.dark-mode .button-edit {
+  background-color: #4CAF50; /* Same green for edit */
+}
+
+#admin.dark-mode .button-edit:hover {
+  background-color: #45a049;
+}
+
+#admin.dark-mode .button-remove {
+  background-color: #f44336; /* Same red for remove */
+}
+
+#admin.dark-mode .button-remove:hover {
+  background-color: #e53935;
+}
+
+#login-container .background {
+  width: 430px;
+  height: 520px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+#login-container .background .shape {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+#login-container .background .shape:first-child {
+  background: linear-gradient(#1845ad, #23a2f6);
+  left: -80px;
+  top: -80px;
+}
+
+#login-container .background .shape:last-child {
+  background: linear-gradient(to right, #ff512f, #f09819);
+  right: -30px;
+  bottom: -80px;
+}
+
+#login-container form {
+  height: 520px;
+  width: 400px;
+  background-color: rgb(63, 63, 63);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+}
+
+#login-container form * {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+
+#login-container form h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+}
+
+#login-container form label {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#login-container form input {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+#login-container form ::placeholder {
+  color: #e5e5e5;
+}
+
+#login-container form button {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#login-container .social div {
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255, 255, 255, 0.27);
+  color: #eaf0fb;
+  text-align: center;
+}
+
+#login-container .social div:hover {
+  background-color: rgba(255, 255, 255, 0.47);
+}
+
+#login-container .social .fb {
+  margin-left: 25px;
+}
+
+#login-container .social i {
+  margin-right: 4px;
+}
+
+/* CSS untuk form input */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  background-color: #f0f0f0; /* Ganti warna latar belakang */
+  color: #333; /* Ganti warna teks */
+  border: 1px solid #ccc; /* Ganti warna border */
+  padding: 10px; /* Menambah padding di dalam input field */
+  border-radius: 5px; /* Memberikan border radius supaya sudut lebih lembut */
+  font-size: 16px; /* Ukuran font untuk teks di input field */
+  width: 100%; /* Mengatur lebar input field agar menyesuaikan dengan container */
+}
+
+/* CSS untuk memberikan efek saat input atau textarea di-hover */
+.form-group input:hover,
+.form-group textarea:hover {
+  border-color: #007bff; /* Mengubah warna border ketika hover */
+}
+
+/* CSS untuk fokus pada input field */
+.form-group input:focus,
+.form-group textarea:focus {
+  background-color: #ffffff; /* Mengubah latar belakang ketika fokus */
+  border-color: #0056b3; /* Mengubah warna border saat fokus */
+  outline: none; /* Menghapus outline default */
+}
